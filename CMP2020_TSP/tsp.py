@@ -1,3 +1,4 @@
+
 """  tsp.py
 #
 # Displays the initial environment, runs the GA then displays the GA's result.
