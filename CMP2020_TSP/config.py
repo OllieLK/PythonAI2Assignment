@@ -20,10 +20,10 @@ NUMBER_OF_CITIES = 8
 
 # when performing path planning to calculate fitness,
 #  you may want to add some random walls to the environment by increasing this value:
-NUMBER_OF_WALLS = 3
+NUMBER_OF_WALLS = 0
 
 # GA parameters
-POPULATION_SIZE = 30
+POPULATION_SIZE = 300
 CROSSOVER_RATE = 0.2
 MUTATION_RATE = 0.05
 

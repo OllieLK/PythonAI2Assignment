@@ -12,6 +12,7 @@
 
 from world import World
 from baselineGA  import *
+from advancedGA import *
 from environment import Environment
 
 import time
@@ -21,8 +22,12 @@ def main():
     # show cities in the random order they were created in
     display = Environment(world, "world -- cities in random order")  
     
-    # Run the GA
-    ga = BaselineGA(world) # <-- if you write multiple different GAs to compare, you can modify this line to test them out
+
+    GAChoice = input("Enter B for Baseline GA, A for Advanced GA: ").strip().upper()
+    if GAChoice == 'A':
+        ga = AdvancedGA(world)
+    elif GAChoice == 'B':
+        ga = BaselineGA(world) # <-- if you write multiple different GAs to compare, you can modify this line to test them out
     solution, fitness = ga.run_GA()
     
     # show cities in the order provided by the GA
