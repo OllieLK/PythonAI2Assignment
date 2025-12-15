@@ -16,7 +16,7 @@ WORLD_WIDTH = 40
 WORLD_HEIGHT = 20
 
 # number of cites 
-NUMBER_OF_CITIES = 8
+NUMBER_OF_CITIES = 50
 
 # when performing path planning to calculate fitness,
 #  you may want to add some random walls to the environment by increasing this value:
@@ -24,11 +24,13 @@ NUMBER_OF_WALLS = 0
 
 # GA parameters
 POPULATION_SIZE = 300
-CROSSOVER_RATE = 0.2
-MUTATION_RATE = 0.05
+CROSSOVER_RATE = 0.05
+MUTATION_RATE = 0.02
 
-MAX_NUMBER_OF_GENERATIONS = 200
+STALL_LIMIT = 30
+UNREACHABLE_PENALTY = 1e9
 
+MAX_NUMBER_OF_GENERATIONS = 1000
 
 
 

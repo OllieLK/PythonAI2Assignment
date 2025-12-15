@@ -18,13 +18,15 @@ from environment import Environment
 import time
 
 def main():
+    random.seed(42) # for reproducibility during testing
     world = World()
     # show cities in the random order they were created in
     display = Environment(world, "world -- cities in random order")  
-    
+    random.seed() # reset the random seed for GA randomness
 
     GAChoice = input("Enter B for Baseline GA, A for Advanced GA: ").strip().upper()
-    if GAChoice == 'A':
+    if GAChoice == 'A': ## Important to note: the fitness calculation in AdvancedGA does consider the walls it has to navigate around,
+                        ## However the graphical output does not change, only showing the straight line routes between cities.
         ga = AdvancedGA(world)
     elif GAChoice == 'B':
         ga = BaselineGA(world) # <-- if you write multiple different GAs to compare, you can modify this line to test them out
